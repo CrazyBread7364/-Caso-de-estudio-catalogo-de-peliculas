@@ -1,4 +1,4 @@
-# Catálogo de Películas — CS-005
+# Catálogo de Películas
 
 Actividad 1. Programa informático de implementación de un entorno de desarrollo de aplicaciones web progresivas.
 
