@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'MovieService',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -84,6 +86,11 @@ DATABASES = {
         "PORT": "", #Ponganle el puerto aqui
     }
 }
+
+# Cors
+CORS_ALLOWED_ORIGINS =[
+    'http://localhost:5173' #Si no jala, cambienle al puerto a lo del vite
+]
 
 
 # Password validation
