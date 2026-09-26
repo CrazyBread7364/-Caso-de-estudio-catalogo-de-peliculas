@@ -20,3 +20,8 @@ El proyecto utiliza una base de datos llamada `caescapel`. Para inicializarla ju
 1. **Crear la base de datos vacía:**
    ```bash
    psql -U postgres -d postgres -c "CREATE DATABASE caescapel;"
+
+2. **Restaurar las tablas y datos de la DB:**
+   ```bash
+   psql -U postgres -d caescapel -f backup_completo_caescapel.sql"
+
