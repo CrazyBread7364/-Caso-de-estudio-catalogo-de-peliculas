@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
+    'MovieService',
     'rest_framework'
 ]
 
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "", #El name de la base de datos
+        "USER": "postgres",
+        "PASSWORD": "", #Y la contrasena
+        "HOST": "localhost",
+        "PORT": "", #Ponganle el puerto aqui
     }
 }
 
