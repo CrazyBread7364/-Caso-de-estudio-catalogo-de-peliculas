@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Películas</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Catálogo de Películas</h1>
+      </header>
+
+      <section class="form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading" class="visually-hidden">Registrar nueva película</h2>
+        <form id="movie-form" novalidate>
+          <div class="form-group">
+            <label for="title">Título</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              required
+              maxlength="200"
+              placeholder="Ej. Inception"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="director">Director</label>
+            <input
+              type="text"
+              id="director"
+              name="director"
+              required
+              maxlength="200"
+              placeholder="Ej. Christopher Nolan"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="genre">Género</label>
+            <input
+              type="text"
+              id="genre"
+              name="genre"
+              required
+              maxlength="100"
+              placeholder="Ej. Ciencia ficción"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="duration_minutes">Duración (minutos)</label>
+            <input
+              type="number"
+              id="duration_minutes"
+              name="duration_minutes"
+              required
+              min="1"
+              step="1"
+              placeholder="Ej. 148"
+            />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submit-btn">Registrar</button>
+          </div>
+        </form>
+      </section>
+
+      <p id="message" role="status" aria-live="polite"></p>
+
+      <section class="table-section" aria-labelledby="catalog-heading">
+        <h2 id="catalog-heading">Películas en Catálogo</h2>
+        <div class="table-responsive">
+          <table aria-describedby="catalog-heading">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">Director</th>
+                <th scope="col">Género</th>
+                <th scope="col">Duración (min)</th>
+              </tr>
+            </thead>
+            <tbody id="movie-list">
+              <!-- Renderizado dinámico seguro sin innerHTML -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
