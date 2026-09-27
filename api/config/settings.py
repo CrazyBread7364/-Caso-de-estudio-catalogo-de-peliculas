@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "", #El name de la base de datos
-        "USER": "postgres",
-        "PASSWORD": "", #Y la contrasena
-        "HOST": "localhost",
-        "PORT": "", #Ponganle el puerto aqui
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'caescapel',    # El nombre de la base de datos que creaste en Postgres
+        'USER': 'postgres',
+        'PASSWORD': 'root',   # La contraseña de tu usuario postgres local
+        'HOST': 'localhost',
+        'PORT': '5432',              # El puerto estándar de PostgreSQL
     }
 }
 
